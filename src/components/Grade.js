@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import GradeDataService from '../services/GradeService';
+import React, { useState, useEffect } from "react";
+import GradeDataService from "../services/GradeService";
 
 const Grade = (props) => {
   const initialGradeState = {
     id: null,
-    name: '',
-    subject: '',
-    type: '',
-    value: '',
+    name: "",
+    subject: "",
+    type: "",
+    value: "",
   };
   const [currentGrade, setCurrentGrade] = useState(initialGradeState);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
   const getGrade = (id) => {
     GradeDataService.get(id)
@@ -35,7 +35,7 @@ const Grade = (props) => {
   const updateGrade = () => {
     GradeDataService.update(currentGrade.id, currentGrade)
       .then((response) => {
-        setMessage('The grade was updated successfully!');
+        setMessage("The grade was updated successfully!");
       })
       .catch((e) => {
         console.log(e);
@@ -45,7 +45,7 @@ const Grade = (props) => {
   const deleteGrade = () => {
     GradeDataService.remove(currentGrade.id)
       .then((response) => {
-        props.history.push('/grade');
+        props.history.push("/grade");
       })
       .catch((e) => {
         console.log(e);
