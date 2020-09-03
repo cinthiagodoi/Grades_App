@@ -1,6 +1,6 @@
 # Grades_App
 
-Front End application, building with React- * [Page](https://grades-app-igti-modulo4.herokuapp.com/)
+Front End application, building with React- *[WebPage](https://grades-app-igti-modulo4.herokuapp.com/)
 
 ### Prerequisites
 
